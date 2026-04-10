@@ -30,13 +30,9 @@
         .bg-brand { background-color: var(--brand-primary); }
 
         .glass-header {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(142, 115, 91, 0.1);
-        }
-
-        .hero-gradient {
-            background: linear-gradient(135deg, #fdfcfb 0%, #f4efea 100%);
         }
 
         .service-card {
@@ -78,7 +74,6 @@
             animation: fadeIn 1s ease forwards;
         }
 
-        /* Classes ajustadas para evidenciar a imagem de fundo */
         .bg-hero {
             background-image: url('01.png');
             background-size: cover;
@@ -86,14 +81,13 @@
             background-repeat: no-repeat;
         }
         
-        /* Overlay mais suave e escuro apenas para dar contraste ao texto branco/claro */
         .hero-overlay {
-            background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+            background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
         }
 
         @media (max-width: 768px) {
             .hero-overlay {
-                background: rgba(0,0,0,0.3); /* Overlay uniforme no mobile para leitura */
+                background: rgba(0,0,0,0.45);
             }
         }
     </style>
@@ -102,44 +96,43 @@
 
     <!-- Header -->
     <header class="glass-header fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex flex-col">
-                <span class="font-serif text-2xl font-bold tracking-tight text-brand">DRA. OLÍVIA VERSIANI</span>
-                <span class="text-[10px] tracking-[0.2em] uppercase opacity-70">Ginecologia & Obstetrícia</span>
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+            <div class="flex flex-col min-w-0">
+                <span class="font-serif text-xl md:text-2xl font-bold tracking-tight text-brand truncate">DRA. OLÍVIA VERSIANI</span>
+                <span class="text-[9px] md:text-[10px] tracking-[0.15em] md:tracking-[0.2em] uppercase opacity-70 truncate">Ginecologia & Obstetrícia</span>
             </div>
             
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <nav class="hidden lg:flex space-x-8 text-sm font-medium">
                 <a href="#inicio" class="btn-hover-effect py-1">Início</a>
                 <a href="#dra" class="btn-hover-effect py-1">A Médica</a>
                 <a href="#servicos" class="btn-hover-effect py-1">Especialidades</a>
                 <a href="#depoimentos" class="btn-hover-effect py-1">Depoimentos</a>
                 <a href="#faq" class="btn-hover-effect py-1">Dúvidas</a>
-                <a href="#contato" class="btn-hover-effect py-1">Contato</a>
             </nav>
 
-            <a href="https://wa.me/5562999999999" target="_blank" class="bg-brand text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-opacity-90 transition-all shadow-md shadow-orange-900/10">
-                Agendar Consulta
+            <a href="https://wa.me/5562999999999" target="_blank" class="bg-brand text-white px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium hover:bg-opacity-90 transition-all shadow-md">
+                Agendar <span class="hidden sm:inline">Consulta</span>
             </a>
         </div>
     </header>
 
-    <!-- Hero Section com imagem totalmente evidente -->
+    <!-- Hero Section -->
     <section id="inicio" class="relative bg-hero min-h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 hero-overlay"></div>
-        <div class="relative max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center z-10 pt-20">
-            <div class="reveal">
-                <span class="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs font-semibold mb-6 shadow-sm">CRM-GO 38362 | RQE 6789</span>
-                <h1 class="font-serif text-5xl md:text-7xl leading-tight mb-6 text-white drop-shadow-lg">
+        <div class="relative max-w-7xl mx-auto px-6 w-full z-10 pt-20">
+            <div class="reveal max-w-2xl">
+                <span class="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] md:text-xs font-semibold mb-6 shadow-sm">CRM-GO 38362 | RQE 6789</span>
+                <h1 class="font-serif text-4xl md:text-7xl leading-tight mb-6 text-white drop-shadow-lg">
                     Cuidado integral à <br><span class="italic text-white/90">saúde da mulher.</span>
                 </h1>
-                <p class="text-lg text-white mb-8 max-w-lg leading-relaxed font-medium drop-shadow-md">
+                <p class="text-base md:text-lg text-white mb-8 max-w-lg leading-relaxed font-medium drop-shadow-md">
                     Atendimento humanizado em Goiânia, focado em ginecologia, obstetrícia de alto risco e bem-estar feminino em todas as fases da vida.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#servicos" class="bg-brand text-white px-8 py-4 rounded-full font-medium hover:shadow-xl transition-all flex items-center justify-center">
+                    <a href="#servicos" class="bg-brand text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:shadow-xl transition-all flex items-center justify-center text-sm md:text-base">
                         Ver Especialidades
                     </a>
-                    <a href="https://wa.me/5562999999999" target="_blank" class="bg-white/10 backdrop-blur-md border border-white/40 text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-brand transition-all flex items-center justify-center shadow-sm">
+                    <a href="https://wa.me/5562999999999" target="_blank" class="bg-white/10 backdrop-blur-md border border-white/40 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:bg-white hover:text-brand transition-all flex items-center justify-center shadow-sm text-sm md:text-base">
                         Fale no WhatsApp
                     </a>
                 </div>
@@ -148,238 +141,164 @@
     </section>
 
     <!-- Serviços -->
-    <section id="servicos" class="py-24 bg-white">
+    <section id="servicos" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl mb-4">Especialidades & Cuidados</h2>
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl mb-4">Especialidades & Cuidados</h2>
                 <div class="w-12 h-0.5 bg-brand mx-auto opacity-40"></div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
                 <div class="service-card p-8 bg-brand-light rounded-3xl border border-brand/5">
-                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                        <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-brand">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                     </div>
                     <h3 class="font-serif text-xl mb-4 text-brand">Ginecologia Geral</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed mb-6">Acompanhamento preventivo, tratamento de SOP, endometriose e menopausa com abordagem humanizada.</p>
-                    <a href="#" class="text-xs font-bold uppercase tracking-widest text-brand hover:opacity-70 transition-all">Saiba mais →</a>
+                    <p class="text-sm text-gray-600 leading-relaxed">Acompanhamento preventivo, tratamento de SOP, endometriose e menopausa com abordagem humanizada.</p>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="service-card p-8 bg-white rounded-3xl border border-brand/10 shadow-sm">
-                    <div class="w-12 h-12 bg-brand-light rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12z"></path></svg>
+                    <div class="w-12 h-12 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12z"></path></svg>
                     </div>
                     <h3 class="font-serif text-xl mb-4 text-brand">Obstetrícia</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed mb-6">Pré-natal personalizado e acompanhamento de gestação de alto risco, garantindo segurança para mãe e bebê.</p>
-                    <a href="#" class="text-xs font-bold uppercase tracking-widest text-brand hover:opacity-70 transition-all">Saiba mais →</a>
+                    <p class="text-sm text-gray-600 leading-relaxed">Pré-natal personalizado e acompanhamento de gestação de alto risco, garantindo segurança para mãe e bebê.</p>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="service-card p-8 bg-brand-light rounded-3xl border border-brand/5">
-                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                        <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-brand">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
                     <h3 class="font-serif text-xl mb-4 text-brand">Microscopia Vaginal</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed mb-6">Diagnóstico avançado e preciso para vulvovaginites recorrentes através de análise microscópica imediata.</p>
-                    <a href="#" class="text-xs font-bold uppercase tracking-widest text-brand hover:opacity-70 transition-all">Saiba mais →</a>
+                    <p class="text-sm text-gray-600 leading-relaxed">Diagnóstico avançado e preciso para vulvovaginites recorrentes através de análise microscópica imediata.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre / Diferencial -->
-    <section id="dra" class="py-24 bg-brand-light/30">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <h2 class="font-serif text-4xl mb-6">A Ciência aliada ao <span class="italic">Acolhimento.</span></h2>
-                <div class="space-y-6 text-gray-600">
+    <!-- Sobre / Dra -->
+    <section id="dra" class="py-20 bg-brand-light/30 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h2 class="font-serif text-3xl md:text-4xl mb-6 text-brand">A Ciência aliada ao <span class="italic text-brand/80">Acolhimento.</span></h2>
+                <div class="space-y-4 text-gray-600 text-sm md:text-base">
                     <p>A medicina não é apenas sobre protocolos, é sobre pessoas. Minha missão é oferecer um espaço de escuta ativa onde cada mulher se sinta protagonista de sua saúde.</p>
                     <p>Com formação sólida e atualização constante em Goiânia, foco na saúde baseada em evidências, integrando tecnologia diagnóstica com um atendimento sensível.</p>
                 </div>
-                <div class="mt-10 grid grid-cols-2 gap-8">
-                    <div>
-                        <p class="text-2xl font-serif text-brand mb-1">10+</p>
-                        <p class="text-xs uppercase tracking-widest font-semibold opacity-60">Anos de Experiência</p>
+                <div class="mt-8 grid grid-cols-2 gap-4">
+                    <div class="bg-white/50 p-4 rounded-2xl">
+                        <p class="text-xl font-serif text-brand">10+</p>
+                        <p class="text-[10px] uppercase tracking-widest font-semibold opacity-60">Anos de Experiência</p>
                     </div>
-                    <div>
-                        <p class="text-2xl font-serif text-brand mb-1">2k+</p>
-                        <p class="text-xs uppercase tracking-widest font-semibold opacity-60">Vidas Acompanhadas</p>
+                    <div class="bg-white/50 p-4 rounded-2xl">
+                        <p class="text-xl font-serif text-brand">2k+</p>
+                        <p class="text-[10px] uppercase tracking-widest font-semibold opacity-60">Vidas Acompanhadas</p>
                     </div>
                 </div>
             </div>
-            <div class="order-1 md:order-2 rounded-full border-8 border-white shadow-2xl overflow-hidden aspect-square max-w-md mx-auto relative reveal" style="animation-delay: 0.2s;">
-                 <img src="02.png" alt="Dra. Olívia Versiani no consultório" class="w-full h-full object-cover">
+            <div class="relative flex justify-center reveal" style="animation-delay: 0.2s;">
+                 <div class="rounded-full border-4 border-white shadow-xl overflow-hidden aspect-square w-64 md:w-80 lg:w-96">
+                    <img src="02.png" alt="Dra. Olívia Versiani" class="w-full h-full object-cover">
+                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Banner Intermediário (Imagem 3) -->
-    <section class="relative py-32 bg-cover bg-center bg-fixed" style="background-image: url('03.png');">
-        <div class="absolute inset-0 bg-brand/80 mix-blend-multiply"></div>
+    <!-- Banner Intermediário -->
+    <section class="relative py-24 md:py-32 bg-cover bg-center bg-fixed" style="background-image: url('03.png');">
+        <div class="absolute inset-0 bg-brand/70 mix-blend-multiply"></div>
         <div class="relative z-10 max-w-4xl mx-auto px-6 text-center reveal">
-            <svg class="w-12 h-12 mx-auto text-white/50 mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            <h2 class="font-serif text-3xl md:text-5xl text-white leading-snug">
+            <h2 class="font-serif text-2xl md:text-4xl text-white leading-snug px-4 italic">
                 "O cuidado com a saúde feminina exige ciência de ponta e um ambiente de escuta e acolhimento."
             </h2>
         </div>
     </section>
 
-    <!-- Depoimentos (Comentários) -->
-    <section id="depoimentos" class="py-24 bg-brand-secondary/30">
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl mb-4">O que dizem as pacientes</h2>
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl mb-4">O que dizem as pacientes</h2>
                 <div class="w-12 h-0.5 bg-brand mx-auto opacity-40"></div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Comentário 1 -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand/5 reveal">
-                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">"A Dra. Olívia é maravilhosa! Me senti super acolhida desde a recepção. Ela explica tudo com muita paciência e clareza. Recomendo de olhos fechados."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center text-brand font-bold">M</div>
-                        <div>
-                            <p class="text-sm font-bold text-gray-800">Mariana S.</p>
-                            <p class="text-xs text-gray-500">Paciente de Pré-natal</p>
-                        </div>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-brand-light/50 p-6 md:p-8 rounded-3xl border border-brand/5 reveal">
+                    <div class="text-yellow-500 mb-4 text-xs">★★★★★</div>
+                    <p class="text-gray-600 text-sm italic mb-6">"A Dra. Olívia é maravilhosa! Me senti super acolhida desde a recepção. Ela explica tudo com muita paciência e clareza."</p>
+                    <p class="text-xs font-bold text-gray-800 uppercase tracking-widest">Mariana S.</p>
                 </div>
 
-                <!-- Comentário 2 -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand/5 reveal" style="animation-delay: 0.1s;">
-                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">"Profissional excelente e humana. A microscopia na hora fez toda a diferença no meu diagnóstico. Consultório lindo e atendimento impecável."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center text-brand font-bold">C</div>
-                        <div>
-                            <p class="text-sm font-bold text-gray-800">Carolina T.</p>
-                            <p class="text-xs text-gray-500">Ginecologia de Rotina</p>
-                        </div>
-                    </div>
+                <div class="bg-brand-light/50 p-6 md:p-8 rounded-3xl border border-brand/5 reveal" style="animation-delay: 0.1s;">
+                    <div class="text-yellow-500 mb-4 text-xs">★★★★★</div>
+                    <p class="text-gray-600 text-sm italic mb-6">"Profissional excelente e humana. A microscopia na hora fez toda a diferença no meu diagnóstico. Consultório lindo."</p>
+                    <p class="text-xs font-bold text-gray-800 uppercase tracking-widest">Carolina T.</p>
                 </div>
 
-                <!-- Comentário 3 -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand/5 reveal" style="animation-delay: 0.2s;">
-                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
-                        ★ ★ ★ ★ ★
-                    </div>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-6">"Nunca me senti tão confortável em uma consulta ginecológica. Ela tirou todas as minhas dúvidas sem pressa. Um alívio encontrar uma médica assim."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center text-brand font-bold">A</div>
-                        <div>
-                            <p class="text-sm font-bold text-gray-800">Aline R.</p>
-                            <p class="text-xs text-gray-500">Tratamento de Endometriose</p>
-                        </div>
-                    </div>
+                <div class="bg-brand-light/50 p-6 md:p-8 rounded-3xl border border-brand/5 reveal" style="animation-delay: 0.2s;">
+                    <div class="text-yellow-500 mb-4 text-xs">★★★★★</div>
+                    <p class="text-gray-600 text-sm italic mb-6">"Nunca me senti tão confortável em uma consulta ginecológica. Um alívio encontrar uma médica assim."</p>
+                    <p class="text-xs font-bold text-gray-800 uppercase tracking-widest">Aline R.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl mb-4">Dúvidas Frequentes</h2>
-                <div class="w-12 h-0.5 bg-brand mx-auto opacity-40"></div>
-            </div>
-            
+    <section id="faq" class="py-20 bg-brand-light/20">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="font-serif text-3xl text-center mb-12 text-brand">Dúvidas Frequentes</h2>
             <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="border border-brand/10 rounded-2xl p-6 hover:shadow-md transition-all">
-                    <h3 class="font-serif text-xl text-brand mb-2">Quais convênios a clínica atende?</h3>
-                    <p class="text-sm text-gray-600">Atualmente realizamos atendimentos particulares para garantir o tempo e a qualidade que você merece. Fornecemos recibo para solicitação de reembolso junto ao seu plano de saúde.</p>
+                <div class="bg-white p-5 rounded-2xl shadow-sm">
+                    <h3 class="font-serif text-lg text-brand mb-2">Quais convênios atende?</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Atendimentos particulares com emissão de recibo para pedido de reembolso no seu plano de saúde.</p>
                 </div>
-                <!-- FAQ Item 2 -->
-                <div class="border border-brand/10 rounded-2xl p-6 hover:shadow-md transition-all">
-                    <h3 class="font-serif text-xl text-brand mb-2">Como funciona a telemedicina?</h3>
-                    <p class="text-sm text-gray-600">A consulta online é ideal para orientações, retorno de exames e prescrições simples. É realizada por plataforma segura, garantindo todo o sigilo médico.</p>
-                </div>
-                <!-- FAQ Item 3 -->
-                <div class="border border-brand/10 rounded-2xl p-6 hover:shadow-md transition-all">
-                    <h3 class="font-serif text-xl text-brand mb-2">Qual a duração média da consulta?</h3>
-                    <p class="text-sm text-gray-600">Nossa primeira consulta costuma durar cerca de 1 hora. Prezamos por um atendimento sem pressa, com escuta ativa e exame físico detalhado.</p>
+                <div class="bg-white p-5 rounded-2xl shadow-sm">
+                    <h3 class="font-serif text-lg text-brand mb-2">Faz telemedicina?</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Sim, para orientações gerais e retornos que não dependam de exame físico imediato.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Rodapé -->
-    <footer id="contato" class="bg-brand text-white pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12 mb-20">
-                <div class="col-span-2">
-                    <span class="font-serif text-3xl font-bold mb-4 block">Dra. Olívia Versiani</span>
-                    <p class="opacity-70 text-sm max-w-xs mb-8">Especialista em cuidar de você em cada fase da sua jornada feminina.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all">IG</a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all">FB</a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all">IN</a>
-                    </div>
+    <footer id="contato" class="bg-brand text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <span class="font-serif text-2xl font-bold mb-4 block">Dra. Olívia Versiani</span>
+                    <p class="opacity-70 text-sm">Ginecologia, Obstetrícia e Bem-estar feminino em Goiânia.</p>
                 </div>
                 <div>
-                    <h4 class="text-sm font-bold uppercase tracking-widest mb-6">Onde estamos</h4>
-                    <p class="opacity-70 text-sm leading-relaxed">
-                        Goiânia - GO<br>
-                        Órion Business & Health Complex<br>
-                        Setor Marista
-                    </p>
+                    <h4 class="text-xs font-bold uppercase tracking-widest mb-4">Localização</h4>
+                    <p class="opacity-70 text-sm">Órion Business & Health Complex<br>Setor Marista, Goiânia - GO</p>
                 </div>
                 <div>
-                    <h4 class="text-sm font-bold uppercase tracking-widest mb-6">Horários</h4>
-                    <p class="opacity-70 text-sm leading-relaxed">
-                        Segunda a Sexta<br>
-                        08:00 — 19:00<br>
-                        Atendimento com Hora Marcada
-                    </p>
+                    <h4 class="text-xs font-bold uppercase tracking-widest mb-4">Contato</h4>
+                    <p class="opacity-70 text-sm">WhatsApp: (62) 99999-9999<br>Instagram: @draoliviaversiani</p>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-10 flex flex-col md:row justify-between items-center text-[10px] uppercase tracking-[0.2em] opacity-50">
-                <span>© 2026 Dra. Olívia Versiani. Todos os direitos reservados.</span>
-                <span class="mt-4 md:mt-0">Desenvolvido com sofisticação</span>
+            <div class="border-t border-white/10 pt-8 text-center text-[9px] uppercase tracking-widest opacity-40">
+                © 2026 Dra. Olívia Versiani. Todos os direitos reservados.
             </div>
         </div>
     </footer>
 
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5562999999999" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center justify-center group">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 21.082h-.006a9.923 9.923 0 0 1-5.05-1.378l-.36-.214-3.748.98 1.002-3.652-.235-.374a9.954 9.954 0 0 1-1.52-5.328C2.115 5.568 7.747.012 14.542.012c3.344 0 6.486 1.303 8.847 3.667a12.518 12.518 0 0 1 3.611 8.842c0 6.877-5.632 12.433-12.427 12.433zm-4.995-3.328c1.551.921 3.332 1.408 5.161 1.408 5.753 0 10.435-4.68 10.435-10.434 0-2.791-1.087-5.414-3.059-7.387A10.536 10.536 0 0 0 14.542 2.01c-5.752 0-10.434 4.68-10.434 10.434 0 1.936.543 3.823 1.572 5.438l-1.636 5.96 6.136-1.605c-.05-.084-.09-.17-.134-.255zm8.125-6.31c-.426-.214-2.52-1.246-2.914-1.388-.393-.142-.681-.214-.969.213-.288.428-1.1 1.388-1.348 1.673-.248.285-.497.321-.923.107-1.924-.963-3.385-2.073-4.48-3.79-.214-.334.214-.316.635-.916.143-.214.288-.428.432-.642.144-.214.072-.428-.035-.642-.108-.214-.969-2.338-1.328-3.2-.35-.845-.705-.731-.968-.745-.25-.013-.538-.013-.826-.013-.288 0-.756.107-1.15.535-.394.428-1.503 1.47-1.503 3.585 0 2.115 1.54 4.158 1.754 4.444.214.285 3.033 4.63 7.345 6.49 1.026.442 1.826.706 2.451.904 1.031.328 1.968.281 2.708.17 1.401-.21 3.535-1.444 4.032-2.84.497-1.396.497-2.593.348-2.842-.148-.25-.538-.392-.964-.606z"/></svg>
-        <!-- Tooltip -->
-        <span class="absolute right-16 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-            Agende pelo WhatsApp
-        </span>
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5562999999999" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center justify-center">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 21.082h-.006a9.923 9.923 0 0 1-5.05-1.378l-.36-.214-3.748.98 1.002-3.652-.235-.374a9.954 9.954 0 0 1-1.52-5.328C2.115 5.568 7.747.012 14.542.012c3.344 0 6.486 1.303 8.847 3.667a12.518 12.518 0 0 1 3.611 8.842c0 6.877-5.632 12.433-12.427 12.433zm-4.995-3.328c1.551.921 3.332 1.408 5.161 1.408 5.753 0 10.435-4.68 10.435-10.434 0-2.791-1.087-5.414-3.059-7.387A10.536 10.536 0 0 0 14.542 2.01c-5.752 0-10.434 4.68-10.434 10.434 0 1.936.543 3.823 1.572 5.438l-1.636 5.96 6.136-1.605c-.05-.084-.09-.17-.134-.255zm8.125-6.31c-.426-.214-2.52-1.246-2.914-1.388-.393-.142-.681-.214-.969.213-.288.428-1.1 1.388-1.348 1.673-.248.285-.497.321-.923.107-1.924-.963-3.385-2.073-4.48-3.79-.214-.334.214-.316.635-.916.143-.214.288-.428.432-.642.144-.214.072-.428-.035-.642-.108-.214-.969-2.338-1.328-3.2-.35-.845-.705-.731-.968-.745-.25-.013-.538-.013-.826-.013-.288 0-.756.107-1.15.535-.394.428-1.503 1.47-1.503 3.585 0 2.115 1.54 4.158 1.754 4.444.214.285 3.033 4.63 7.345 6.49 1.026.442 1.826.706 2.451.904 1.031.328 1.968.281 2.708.17 1.401-.21 3.535-1.444 4.032-2.84.497-1.396.497-2.593.348-2.842-.148-.25-.538-.392-.964-.606z"/></svg>
     </a>
 
     <script>
-        // Smooth scroll reveal effect
         window.addEventListener('scroll', () => {
             const reveals = document.querySelectorAll('.reveal');
             reveals.forEach(el => {
-                const windowHeight = window.innerHeight;
                 const elementTop = el.getBoundingClientRect().top;
-                const elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
+                if (elementTop < window.innerHeight - 100) {
                     el.style.opacity = '1';
                     el.style.transform = 'translateY(0)';
                 }
             });
-        });
-
-        // Header shadow on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-lg');
-            } else {
-                header.classList.remove('shadow-lg');
-            }
         });
     </script>
 </body>

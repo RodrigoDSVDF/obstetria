@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Olívia Versiani | Ginecologia e Obstetrícia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #8e735b;
+            --brand-secondary: #f4efea;
+            --brand-accent: #c5a88e;
+            --text-dark: #2d2a26;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .bg-brand-light { background-color: var(--brand-secondary); }
+        .text-brand { color: var(--brand-primary); }
+        .bg-brand { background-color: var(--brand-primary); }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(142, 115, 91, 0.1);
+        }
+
+        /* ----- MÁGICA DA LOGO AQUI ----- */
+        .header-logo-container {
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.85; /* Deixa a logo levemente suave */
+        }
+
+        .header-logo-img {
+            width: 85px; /* Tamanho da logo */
+            height: auto;
+            /* O comando abaixo faz o fundo branco da imagem sumir! */
+            mix-blend-mode: multiply; 
+        }
+
+        @media (min-width: 768px) {
+            .header-logo-container {
+                left: -30px;
+            }
+            .header-logo-img {
+                width: 100px;
+            }
+        }
+        /* ------------------------------- */
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(142, 115, 91, 0.1);
+        }
+
+        .btn-hover-effect {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-hover-effect:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        .btn-hover-effect:hover:after {
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Imagem de Fundo do Topo */
+        .bg-hero {
+            background-image: url('01.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
+        }
+
+        @media (max-width: 768px) {
+            .hero-overlay {
+                background: rgba(0,0,0,0.45);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="glass-header fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+            <div class="flex flex-col min-w-0 relative">
+                
+                <!-- LOGO DO BEIJA-FLOR INTEGRADA -->
+                <div class="header-logo-container">
+                    <img src="Gemini_Generated_Image_7hc7gd7hc7gd7hc7.jpg" alt="Logo Dra. Olívia" class="header-logo-img">
+                </div>
+
+                <span class="font-serif text-xl md:text-2xl font-bold tracking-tight text-brand truncate relative z-10 pl-6 md:pl-8">DRA. OLÍVIA VERSIANI</span>
+                <span class="text-[9px] md:text-[10px] tracking-[0.15em] md:tracking-[0.2em] uppercase opacity-90 truncate relative z-10 pl-6 md:pl-8 font-medium">Ginecologia & Obstetrícia</span>
+            </div>
+            
+            <nav class="hidden lg:flex space-x-8 text-sm font-medium">
+                <a href="#inicio" class="btn-hover-effect py-1">Início</a>
+                <a href="#dra" class="btn-hover-effect py-1">A Médica</a>
+                <a href="#servicos" class="btn-hover-effect py-1">Especialidades</a>
+                <a href="#depoimentos" class="btn-hover-effect py-1">Depoimentos</a>
+                <a href="#faq" class="btn-hover-effect py-1">Dúvidas</a>
+            </nav>
+
+            <a href="https://wa.me/5562999999999" target="_blank" class="bg-brand text-white px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium hover:bg-opacity-90 transition-all shadow-md relative z-20">
+                Agendar <span class="hidden sm:inline">Consulta</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-hero min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative max-w-7xl mx-auto px-6 w-full z-10 pt-20">
+            <div class="reveal max-w-2xl">
+                <span class="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] md:text-xs font-semibold mb-6 shadow-sm">CRM-GO 38362 | RQE 6789</span>
+                <h1 class="font-serif text-4xl md:text-7xl leading-tight mb-6 text-white drop-shadow-lg">
+                    Cuidado integral à <br><span class="italic text-white/90">saúde da mulher.</span>
+                </h1>
+                <p class="text-base md:text-lg text-white mb-8 max-w-lg leading-relaxed font-medium drop-shadow-md">
+                    Atendimento humanizado em Goiânia, focado em ginecologia, obstetrícia de alto risco e bem-estar feminino em todas as fases da vida.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#servicos" class="bg-brand text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:shadow-xl transition-all flex items-center justify-center text-sm md:text-base">
+                        Ver Especialidades
+                    </a>
+                    <a href="https://wa.me/5562999999999" target="_blank" class="bg-white/10 backdrop-blur-md border border-white/40 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-medium hover:bg-white hover:text-brand transition-all flex items-center justify-center shadow-sm text-sm md:text-base">
+                        Fale no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl mb-4">Especialidades & Cuidados</h2>
+                <div class="w-12 h-0.5 bg-brand mx-auto opacity-40"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card p-8 bg-brand-light rounded-3xl border border-brand/5">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-brand">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-xl mb-4 text-brand">Ginecologia Geral</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Acompanhamento preventivo, tratamento de SOP, endometriose e menopausa com abordagem humanizada.</p>
+                </div>
+
+                <div class="service-card p-8 bg-white rounded-3xl border border-brand/10 shadow-sm">
+                    <div class="w-12 h-12 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-xl mb-4 text-brand">Obstetrícia</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Pré-natal personalizado e acompanhamento de gestação de alto risco, garantindo segurança para mãe e bebê.</p>
+                </div>
+
+                <div class="service-card p-8 bg-brand-light rounded-3xl border border-brand/5">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-brand">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-xl mb-4 text-brand">Microscopia Vaginal</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Diagnóstico avançado e preciso para vulvovaginites recorrentes através de análise microscópica imediata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre / Dra -->
+    <section id="dra" class="py-20 bg-brand-light/30 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h2 class="font-serif text-3xl md:text-4xl mb-6 text-brand">A Ciência aliada ao <span class="italic text-brand/80">Acolhimento.</span></h2>
+                <div class="space-y-4 text-gray-600 text-sm md:text-base">
+                    <p>A medicina não é apenas sobre protocolos, é sobre pessoas. Minha missão é oferecer um espaço de escuta ativa onde cada mulher se sinta protagonista de sua saúde.</p>
+                    <p>Com formação sólida e atualização constante em Goiânia, foco na saúde baseada em evidências, integrando tecnologia diagnóstica com um atendimento sensível.</p>
+                </div>
+                <div class="mt-8 grid grid-cols-2 gap-4">
+                    <div class="bg-white/50 p-4 rounded-2xl">
+                        <p class="text-xl font-serif text-brand">10+</p>
+                        <p class="text-[10px] uppercase tracking-widest font-semibold opacity-60">Anos de Experiência</p>
+                    </div>
+                    <div class="bg-white/50 p-4 rounded-2xl">
+                        <p class="text-xl font-serif text-brand">2k+</p>
+                        <p class="text-[10px] uppercase tracking-widest font-semibold opacity-60">Vidas Acompanhadas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex justify-center reveal" style="animation-delay: 0.2s;">
+                 <div class="rounded-full border-4 border-white shadow-xl overflow-hidden aspect-square w-64 md:w-80 lg:w-96">
+                    <!-- Foto da Médica -->
+                    <img src="02.png" alt="Dra. Olívia Versiani" class="w-full h-full object-cover">
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Intermediário -->
+    <section class="relative py-24 md:py-32 bg-cover bg-center bg-fixed" style="background-image: url('03.png');">
+        <div class="absolute inset-0 bg-brand/70 mix-blend-multiply"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center reveal">
+            <h2 class="font-serif text-2xl md:text-4xl text-white leading-snug px-4 italic">
+                "O cuidado com a saúde feminina exige ciência de ponta e um ambiente de escuta e acolhimento."
+            </h2>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl mb-4">O que dizem as pacientes</h2>
+                <div class="w-12 h-0.5 bg-brand mx-auto opacity-40"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-brand-light/50 p-6 md:p-8 rounded-3xl border border-brand/5 reveal">
+                    <div class="text-yellow-500 mb-4 text-xs">★★★★★</div>
+                    <p class="text-gray-600 text-sm italic mb-6">"A Dra. Olívia é maravilhosa! Me senti super acolhida desde a recepção. Ela explica tudo com muita paciência e clareza."</p>
+                    <p class="text-xs font-bold text-gray-800 uppercase tracking-widest">Mariana S.</p>
+                </div>
+
+                <div class="bg-brand-light/50 p-6 md:p-8 rounded-3xl border border-brand/5 reveal" style="animation-delay: 0.1s;">
+                    <div class="text-yellow-500 mb-4 text-xs">★★★★★</div>
+                    <p class="text-gray-600 text-sm italic mb-6">"Profissional excelente e humana. A microscopia na hora fez toda a diferença no meu diagnóstico. Consultório lindo."</p>
+                    <p class="text-xs font-bold text-gray-800 uppercase tracking-widest">Carolina T.</p>
+                </div>
+
+                <div class="bg-brand-light/50 p-6 md:p-8 rounded-3xl border border-brand/5 reveal" style="animation-delay: 0.2s;">
+                    <div class="text-yellow-500 mb-4 text-xs">★★★★★</div>
+                    <p class="text-gray-600 text-sm italic mb-6">"Nunca me senti tão confortável em uma consulta ginecológica. Um alívio encontrar uma médica assim."</p>
+                    <p class="text-xs font-bold text-gray-800 uppercase tracking-widest">Aline R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-brand-light/20">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="font-serif text-3xl text-center mb-12 text-brand">Dúvidas Frequentes</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-5 rounded-2xl shadow-sm">
+                    <h3 class="font-serif text-lg text-brand mb-2">Quais convênios atende?</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Atendimentos particulares com emissão de recibo para pedido de reembolso no seu plano de saúde.</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl shadow-sm">
+                    <h3 class="font-serif text-lg text-brand mb-2">Faz telemedicina?</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Sim, para orientações gerais e retornos que não dependam de exame físico imediato.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="bg-brand text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <span class="font-serif text-2xl font-bold mb-4 block">Dra. Olívia Versiani</span>
+                    <p class="opacity-70 text-sm">Ginecologia, Obstetrícia e Bem-estar feminino em Goiânia.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest mb-4">Localização</h4>
+                    <p class="opacity-70 text-sm">Órion Business & Health Complex<br>Setor Marista, Goiânia - GO</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest mb-4">Contato</h4>
+                    <p class="opacity-70 text-sm">WhatsApp: (62) 99999-9999<br>Instagram: @draoliviaversiani</p>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-[9px] uppercase tracking-widest opacity-40">
+                © 2026 Dra. Olívia Versiani. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5562999999999" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center justify-center">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 21.082h-.006a9.923 9.923 0 0 1-5.05-1.378l-.36-.214-3.748.98 1.002-3.652-.235-.374a9.954 9.954 0 0 1-1.52-5.328C2.115 5.568 7.747.012 14.542.012c3.344 0 6.486 1.303 8.847 3.667a12.518 12.518 0 0 1 3.611 8.842c0 6.877-5.632 12.433-12.427 12.433zm-4.995-3.328c1.551.921 3.332 1.408 5.161 1.408 5.753 0 10.435-4.68 10.435-10.434 0-2.791-1.087-5.414-3.059-7.387A10.536 10.536 0 0 0 14.542 2.01c-5.752 0-10.434 4.68-10.434 10.434 0 1.936.543 3.823 1.572 5.438l-1.636 5.96 6.136-1.605c-.05-.084-.09-.17-.134-.255zm8.125-6.31c-.426-.214-2.52-1.246-2.914-1.388-.393-.142-.681-.214-.969.213-.288.428-1.1 1.388-1.348 1.673-.248.285-.497.321-.923.107-1.924-.963-3.385-2.073-4.48-3.79-.214-.334.214-.316.635-.916.143-.214.288-.428.432-.642.144-.214.072-.428-.035-.642-.108-.214-.969-2.338-1.328-3.2-.35-.845-.705-.731-.968-.745-.25-.013-.538-.013-.826-.013-.288 0-.756.107-1.15.535-.394.428-1.503 1.47-1.503 3.585 0 2.115 1.54 4.158 1.754 4.444.214.285 3.033 4.63 7.345 6.49 1.026.442 1.826.706 2.451.904 1.031.328 1.968.281 2.708.17 1.401-.21 3.535-1.444 4.032-2.84.497-1.396.497-2.593.348-2.842-.148-.25-.538-.392-.964-.606z"/></svg>
+    </a>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < window.innerHeight - 100) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
